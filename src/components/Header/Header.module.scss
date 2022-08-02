@@ -1,0 +1,44 @@
+.div {
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  width: 100%;
+  border-spacing: 0px;
+  overflow: hidden;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.table {
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.table th {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.table th:first-child {
+  padding-left: 10px;
+}
+
+.table th:last-child {
+  padding-right: 10px;
+}
+
+.tbody td {
+  border: none;
+  line-height: 1.4;
+}
+
+.table td {
+  text-align: center;
+}
+
+.thead {
+  background: rgba(255, 255, 255, 0.2);
+}

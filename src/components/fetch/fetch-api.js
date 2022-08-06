@@ -1,6 +1,5 @@
-const fetchAPICurs = () => {
+export const fetchApiLayer = () => {
   return fetch(
-    `https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=5`
-  ).then((res) => res.json());
+    "https://openexchangerates.org/api/latest.json?app_id=b8d8f5a9e5634e6ca168bb5f5f730afb"
+  ).then((response) => response.json());
 };
-export default fetchAPICurs;

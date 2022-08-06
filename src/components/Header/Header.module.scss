@@ -3,12 +3,13 @@
   text-align: center;
   color: white;
   background-color: blue;
-  width: 100%;
+  width: 300px;
   border-spacing: 0px;
   overflow: hidden;
 
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -18,6 +19,8 @@
 }
 
 .table th {
+  width: 150px;
+  height: 30px;
   font-weight: 700;
   font-size: 18px;
 }
@@ -31,6 +34,7 @@
 }
 
 .tbody td {
+  height: 30px;
   border: none;
   line-height: 1.4;
 }

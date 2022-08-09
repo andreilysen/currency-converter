@@ -1,29 +1,34 @@
 import { useEffect, useState } from "react";
-import { fetchApiLayer } from "../fetch/fetch-api";
+// import { fetchCurrency } from "../fetch/fetch-api";
 
 import s from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({ rates }) => {
   const [amountUAH, setAmountUAN] = useState(1);
   const [amountEUR, setAmountEUR] = useState(1);
   const [amountPLN, setAmountPLN] = useState(1);
 
+  console.log("rates", rates);
+
   useEffect(() => {
-    getFetchCurs();
-  }, []);
+    setAmountUAN(rates["UAH"]);
+    setAmountEUR(rates["EUR"]);
+    setAmountPLN(rates["PLN"]);
+    // getFetchCurs();
+  }, [rates]);
 
-  const getFetchCurs = () => {
-    fetchApiLayer()
-      .then((res) => {
-        setAmountUAN(res.rates["UAH"]);
-        setAmountEUR(res.rates["EUR"]);
-        setAmountPLN(res.rates["PLN"]);
-      })
+  // const getFetchCurs = () => {
+  //   fetchCurrency()
+  //     .then((res) => {
+  //       setAmountUAN(res.rates["UAH"]);
+  //       setAmountEUR(res.rates["EUR"]);
+  //       setAmountPLN(res.rates["PLN"]);
+  //     })
 
-      .catch((err) => {});
-  };
+  //     .catch((err) => {});
+  // };
 
-  console.log("curs", amountUAH);
+  // console.log("curs", amountUAH);
   return (
     <header className={s.div}>
       <table className={s.table}>

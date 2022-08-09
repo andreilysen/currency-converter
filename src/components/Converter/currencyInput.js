@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import "./Converter.scss";
 
 const CurrencyInput = (props) => {
+  // console.log("props.amount", props.amount);
   return (
     <div className="group">
       <input
